@@ -48,7 +48,6 @@ const transporter = nodemailer.createTransport({
       user.create({
         mail:req.body.mail,
         password:bcrypt.hashSync(req.body.password,10),
-        emailverified:false,
         emailcode:otp
       })
             
